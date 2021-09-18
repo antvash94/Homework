@@ -27,6 +27,7 @@ class TestHomework(unittest.TestCase):
     def test_my_split(self):
         self.assertListEqual(my_split("Hello world python"), ["Hello", 'world', 'python'])
         self.assertListEqual(my_split("Hello world, python", ","), ["Hello world", " python"])
+        self.assertListEqual(my_split("Hello world, python", "world"), ["Hello ", ", python"])
 
     # Task 4
     def test_split_by_index(self):
