@@ -20,14 +20,17 @@ class TestHomework(unittest.TestCase):
     # Task 2
     def test_is_palindrome(self):
         self.assertTrue(is_palindrome("91019"))
-        self.assertTrue("Anna")
+        self.assertTrue(is_palindrome("Anna"))
         self.assertFalse(is_palindrome("assert false"))
+        self.assertTrue(is_palindrome("A lot not new I saw as I went on to L.A."))
 
     # Task 3
     def test_my_split(self):
-        self.assertListEqual(my_split("Hello world python"), ["Hello", 'world', 'python'])
-        self.assertListEqual(my_split("Hello world, python", ","), ["Hello world", " python"])
-        self.assertListEqual(my_split("Hello world, python", "world"), ["Hello ", ", python"])
+        test_string = "Hello world python"
+        self.assertListEqual(my_split(test_string), test_string.split())
+        self.assertListEqual(my_split(test_string, ","), test_string.split(","))
+        self.assertListEqual(my_split(test_string, "world"), test_string.split("world"))
+        self.assertListEqual(my_split(test_string, "l"), test_string.split("l"))
 
     # Task 4
     def test_split_by_index(self):
