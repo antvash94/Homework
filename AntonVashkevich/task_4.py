@@ -1,7 +1,7 @@
 class Bird:
     def __init__(self, name):
         self.name = name
-        print("init_A")
+
 
     def fly(self):
         print(f"{self.name} bird can fly")
@@ -15,7 +15,7 @@ class Bird:
 
 class FlyingBird(Bird):
     def __init__(self, name, ration="grains"):
-        print("INt B")
+
         super().__init__(name)
         self.ration = ration
 
@@ -29,7 +29,7 @@ class FlyingBird(Bird):
 class NonFlyingBird(Bird):
 
     def __init__(self, name, ration="fish"):
-        print("init c")
+
         super().__init__(name)
         self.ration = ration
 
