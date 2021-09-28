@@ -22,12 +22,18 @@ class Pagination:
 
     def find_page(self, word):
         if word in self.text:
-            pass
-
+            result = set()
+            index_list = [(i, i+len(word)) for i in range(len(self.text)) if self.text.startswith(word, i)]
+            for index in index_list:
+                for i in range(index[0],index[1]+1):
+                    result.add(i//self.symbols)
+            return sorted(list(result))
         raise Exception(f"{word}' is missing on the pages")
 
 
 
 
+
 pages = Pagination('Your beautiful text', 5)
-print(pages.find_page("t"))
+
+print(pages.find_page("beautiful"))
