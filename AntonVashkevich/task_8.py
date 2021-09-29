@@ -1,16 +1,19 @@
 class MySquareIterator:
     def __init__(self, lst):
-        self.start = lst[0]
-        self.stop = lst[-1]
+        self.lst = lst
+        self.index = -1
 
     def __iter__(self):
-        return self.lst
+        return self
 
     def __next__(self):
-        if self.start > self.stop:
+        self.index += 1
+        if self.index == len(self.lst):
             raise StopIteration
         else:
-            return self.lst**2
+            return self.lst[self.index]**2
 
 
-
+a = MySquareIterator([1, 2, 3, 4, 5])
+for i in a:
+    print(i)
