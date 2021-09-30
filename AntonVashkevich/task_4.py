@@ -11,5 +11,6 @@ def ignored(*exceptions):
         print("exception not occurred")
 
 
-with ignored(ZeroDivisionError):
+with ignored(ZeroDivisionError, ValueError):
     print(2/0)
+    print(x)
