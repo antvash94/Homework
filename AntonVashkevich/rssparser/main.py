@@ -1,4 +1,4 @@
-from rss_parser import Parser
+from .rss_parser import Parser
 import argparse
 import sys
 import logging

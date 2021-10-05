@@ -39,5 +39,9 @@ def get_media_ns(data):
     """"""
     return re.findall(r'xmlns:media="(\S+/)', data)[0]
 
+import requests
+
+r = requests.get("https://www.onliner.by/feed").text
+
 
 
