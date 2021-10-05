@@ -1,0 +1,2 @@
+class NotXml(Exception):
+    pass
