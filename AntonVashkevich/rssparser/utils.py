@@ -19,17 +19,17 @@ def get_datetime(date):
         for ts in time_stamps:
             try:
                 time = datetime.strptime(date, ts)
-                return time
+                return time.date()
             except Exception:
                 pass
     else:
-        return time
+        return time.date()
 
 
 def normalize_data(data):
     """"""
     try:
-        result = normalize("NFKD", unescape(re.sub("<[^<]+?>", '', data.strip())))
+        result = unescape(re.sub("<[^<]+?>", '', data.strip()))
         return result
     except Exception:
         return data
@@ -39,9 +39,7 @@ def get_media_ns(data):
     """"""
     return re.findall(r'xmlns:media="(\S+/)', data)[0]
 
-import requests
 
-r = requests.get("https://www.onliner.by/feed").text
 
 
 

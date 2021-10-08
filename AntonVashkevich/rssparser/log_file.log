@@ -1,14 +1,65 @@
-WARNING 2021-10-05 16:27:28,787 create http://dev.by/rss parser
-INFO 2021-10-05 16:27:29,310 to_json:start 
-INFO 2021-10-05 16:27:29,310 get_channel_info:start 
-INFO 2021-10-05 16:27:29,311 get_channel_info:complete
-INFO 2021-10-05 16:27:29,311 get_articles:start 
-INFO 2021-10-05 16:27:29,312 get_articles:complete
-INFO 2021-10-05 16:27:29,312 to_json:complete
-WARNING 2021-10-05 16:27:44,634 create http://dev.by/rss parser
-INFO 2021-10-05 16:27:45,080 to_json:start 
-INFO 2021-10-05 16:27:45,080 get_channel_info:start 
-INFO 2021-10-05 16:27:45,080 get_channel_info:complete
-INFO 2021-10-05 16:27:45,080 get_articles:start 
-INFO 2021-10-05 16:27:45,082 get_articles:complete
-INFO 2021-10-05 16:27:45,082 to_json:complete
+WARNING 2021-10-07 15:47:20,572 create https://www.yahoo.com/news/rss parser
+INFO 2021-10-07 15:47:20,882 to_json:start 
+INFO 2021-10-07 15:47:20,882 get_channel_info:start 
+INFO 2021-10-07 15:47:20,882 get_channel_info:complete
+INFO 2021-10-07 15:47:20,882 get_articles:start 
+INFO 2021-10-07 15:47:20,883 get_articles:complete
+INFO 2021-10-07 15:47:20,884 to_json:complete
+INFO 2021-10-07 15:47:20,884 insert_data:start 
+ERROR 2021-10-07 15:47:20,884 'description': occurred
+INFO 2021-10-07 15:47:20,884 make_articles:start 
+INFO 2021-10-07 15:47:20,884 get_channel_info:start 
+INFO 2021-10-07 15:47:20,884 get_channel_info:complete
+INFO 2021-10-07 15:47:20,884 get_articles:start 
+INFO 2021-10-07 15:47:20,886 get_articles:complete
+INFO 2021-10-07 15:47:20,886 make_articles:complete
+WARNING 2021-10-07 16:01:51,279 create https://www.yahoo.com/news/rss parser
+INFO 2021-10-07 16:01:51,643 to_json:start 
+INFO 2021-10-07 16:01:51,643 get_channel_info:start 
+INFO 2021-10-07 16:01:51,643 get_channel_info:complete
+INFO 2021-10-07 16:01:51,643 get_articles:start 
+INFO 2021-10-07 16:01:51,645 get_articles:complete
+INFO 2021-10-07 16:01:51,646 to_json:complete
+INFO 2021-10-07 16:01:51,646 insert_data:start 
+INFO 2021-10-07 16:01:51,769 insert_data:complete
+INFO 2021-10-07 16:01:51,769 make_articles:start 
+INFO 2021-10-07 16:01:51,770 get_channel_info:start 
+INFO 2021-10-07 16:01:51,770 get_channel_info:complete
+INFO 2021-10-07 16:01:51,770 get_articles:start 
+INFO 2021-10-07 16:01:51,771 get_articles:complete
+INFO 2021-10-07 16:01:51,771 make_articles:complete
+INFO 2021-10-07 16:06:21,310 get_articles_by_date:start 
+INFO 2021-10-07 16:06:21,314 get_articles_by_date:complete
+WARNING 2021-10-07 16:07:53,462 create https://www.onliner.by parser
+ERROR 2021-10-07 16:07:53,594 <class 'exceptions.NotXml'>
+INFO 2021-10-07 16:07:53,595 to_json:start 
+INFO 2021-10-07 16:07:53,595 get_channel_info:start 
+ERROR 2021-10-07 16:07:53,595 'Parser' object has no attribute 'root': occurred
+INFO 2021-10-07 16:07:53,595 get_articles:start 
+ERROR 2021-10-07 16:07:53,595 'Parser' object has no attribute 'root': occurred
+INFO 2021-10-07 16:07:53,595 to_json:complete
+INFO 2021-10-07 16:07:53,595 insert_data:start 
+INFO 2021-10-07 16:07:53,595 insert_data:complete
+INFO 2021-10-07 16:07:53,595 make_articles:start 
+INFO 2021-10-07 16:07:53,595 get_channel_info:start 
+ERROR 2021-10-07 16:07:53,596 'Parser' object has no attribute 'root': occurred
+INFO 2021-10-07 16:07:53,596 get_articles:start 
+ERROR 2021-10-07 16:07:53,596 'Parser' object has no attribute 'root': occurred
+INFO 2021-10-07 16:07:53,596 make_articles:complete
+WARNING 2021-10-07 16:12:01,282 create https://www.onliner.by parser
+ERROR 2021-10-07 16:12:01,739 <class 'exceptions.NotXml'>
+ERROR 2021-10-07 16:12:01,739 Not xml
+INFO 2021-10-07 16:12:01,739 to_json:start 
+INFO 2021-10-07 16:12:01,739 get_channel_info:start 
+ERROR 2021-10-07 16:12:01,740 'Parser' object has no attribute 'root': occurred
+INFO 2021-10-07 16:12:01,740 get_articles:start 
+ERROR 2021-10-07 16:12:01,740 'Parser' object has no attribute 'root': occurred
+INFO 2021-10-07 16:12:01,740 to_json:complete
+INFO 2021-10-07 16:12:01,740 insert_data:start 
+INFO 2021-10-07 16:12:01,740 insert_data:complete
+INFO 2021-10-07 16:12:01,740 make_articles:start 
+INFO 2021-10-07 16:12:01,740 get_channel_info:start 
+ERROR 2021-10-07 16:12:01,740 'Parser' object has no attribute 'root': occurred
+INFO 2021-10-07 16:12:01,740 get_articles:start 
+ERROR 2021-10-07 16:12:01,740 'Parser' object has no attribute 'root': occurred
+INFO 2021-10-07 16:12:01,740 make_articles:complete

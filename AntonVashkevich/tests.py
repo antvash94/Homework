@@ -1,7 +1,4 @@
-import unittest
-from rss_parser import Parser
-import json
-from utils import *
+
 
 
 class TestParser(unittest.TestCase):

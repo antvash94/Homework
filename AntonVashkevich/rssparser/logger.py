@@ -10,6 +10,7 @@ def logger(func):
             res = func(*args, **kwargs)
         except Exception as ex:
             logging.error(f"{ex}: occurred")
+            return ''
         else:
             logging.info(f"{func.__name__}:complete")
             return res
