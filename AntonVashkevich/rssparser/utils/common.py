@@ -1,8 +1,8 @@
 from datetime import datetime
 from email.utils import parsedate_to_datetime
 from html import unescape
-from unicodedata import normalize
 import re
+
 time_stamps = ("%b %d %Y at %I:%M%p",
                "%B %d, %Y, %H:%M:%S",
                "%a,%d/%m/%y,%I:%M%p",
@@ -38,6 +38,9 @@ def normalize_data(data):
 def get_media_ns(data):
     """"""
     return re.findall(r'xmlns:media="(\S+/)', data)[0]
+
+
+
 
 
 

@@ -1,8 +1,8 @@
 import argparse
 import logging
 import sys
-from .rss_parser import Parser
-from .db import insert_data, get_articles_by_date
+from utils.rss_parser import Parser
+from utils.db import insert_data, get_articles_by_date
 
 
 __VERSION__ = 1.0

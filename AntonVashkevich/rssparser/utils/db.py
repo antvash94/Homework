@@ -2,8 +2,8 @@ import datetime
 from sqlalchemy import Column, Integer, String, Date, create_engine
 from sqlalchemy.orm import declarative_base, Session
 import json
-from .logger import logger
-from .utils import get_datetime
+from logger import logger
+from common import get_datetime
 
 Base = declarative_base()
 

@@ -2,10 +2,10 @@ import requests
 import xml.etree.ElementTree as et
 import json
 import logging
-from .exceptions import NotXml
-from .logger import logger
+from exceptions import NotXml
+from logger import logger
 import os
-from .utils import normalize_data, get_media_ns
+from common import normalize_data, get_media_ns
 
 
 class Parser:

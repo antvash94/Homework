@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<title>{{info}}</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+{% for item in content %}
+<div class="w3-row-padding w3-padding-16 w3-center" >
+    <h2>{{ item["title"] }}</h2>
+    <p>{{ item["pubDate"] }}</p>
+    <img src="{{item['media']}}"style="width:100%" >
+    <p>{{ item["description"] }}</p>
+    <p><a href="{{item['link']}}" target="blank">read on site>></a></p>
+
+    </div>
+
+{% endfor %}
