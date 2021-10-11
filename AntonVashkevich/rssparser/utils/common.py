@@ -1,7 +1,9 @@
+import random
 from datetime import datetime
 from email.utils import parsedate_to_datetime
 from html import unescape
 import re
+import requests
 
 time_stamps = ("%b %d %Y at %I:%M%p",
                "%B %d, %Y, %H:%M:%S",
@@ -40,9 +42,9 @@ def get_media_ns(data):
     return re.findall(r'xmlns:media="(\S+/)', data)[0]
 
 
-
-
-
-
-
-
+def download_img(image_url):
+    img_data = requests.get(image_url).content
+    img_path = f"templates/image/{hash(image_url)}.jpg"
+    with open(img_path, 'wb') as handler:
+        handler.write(img_data)
+    return img_path

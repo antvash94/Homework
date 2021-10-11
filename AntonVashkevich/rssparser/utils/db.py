@@ -4,7 +4,6 @@ from sqlalchemy.orm import declarative_base, Session
 import json
 from logger import logger
 from common import get_datetime
-
 Base = declarative_base()
 
 
@@ -51,14 +50,31 @@ def get_articles_by_date(date, link=None, limit=None):
         q = session.query(Archive).filter_by(date=date, feed=link).all()
     else:
         q = session.query(Archive).filter_by(date=date).all()
+    print(q)
     header = f"News archive\nDate:{date}\nFeed:{link if link else 'all feeds'}\n"
     content = "".join([f"\nTitle: {article.title}\n"
                        f"Pubdate: {article.date}\n"
                        f"Description: {article.description}\n"
                        f"Link: {article.link}\n"f""
                        f"Media: {article.media}\n"
-                       for article in q][:limit]
+                       for article in q[:limit]]
                       )
     if not content:
         raise FileNotFoundError(f"File not Found 'date:{date}, link:{link}'")
     return header+content
+
+
+def get_json(date, link=None, limit=None):
+    date = datetime.datetime.strptime(date, "%Y%m%d").date()
+    if link:
+        q = session.query(Archive).filter_by(date=date, feed=link).all()
+    else:
+        q = session.query(Archive).filter_by(date=date).all()
+    r = {"info": link if link else "all feeds",
+                    "content": [{"title": i.title,
+                                 "pubDate": str(i.date),
+                                 "description": i.description,
+                                 "link": i.link,
+                                 "media": i.media}
+                                for i in q[:limit]]}
+    return json.dumps(r)
