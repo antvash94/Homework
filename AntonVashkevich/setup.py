@@ -7,9 +7,11 @@ setup(name='RSSparser',
       description='Final task for EPAM training',
       author='Anton Vashkevich',
       author_email='ant.vash94@gmail.com',
-      packages=['rssparser','rssparser.utils'],
+
+      packages=['rss_parser', 'rss_parser.utils'],
+      package_data={"rss_parser.utils": ["templates/*", "templates/fonts/*", "image/*"]},
       entry_points={
-        'console_scripts': ['rss-parser=rssparser.main:main'],
+        'console_scripts': ['rss-parser=rss_parser.main:main'],
                     }
 
      )
