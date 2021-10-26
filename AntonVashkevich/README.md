@@ -31,3 +31,7 @@ optional arguments:
                 ]
                 }
 ```
+# Tests
+```
+ python -m unittest tests.py    
+```

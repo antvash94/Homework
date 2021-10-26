@@ -11,10 +11,11 @@ from common import normalize_data, get_media_ns
 class Parser:
     """
     :methods
-    get_channel_info()
     get_articles()
-    make_articles()
+    parse rss feed
+    :return list of item dicts
     to_json()
+    :return json
     """
     def __init__(self, url, limit=None):
         """
