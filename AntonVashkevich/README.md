@@ -17,6 +17,11 @@ optional arguments:
   --colorize     Colorize stdout
   --limit LIMIT  Limit news topics if this parameter provided
 ```
+# Installation
+```
+pip install requirments.txt
+pip install .
+```
 # JSON schema
 ```
 { "info"  : title,
